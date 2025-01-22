@@ -1,4 +1,0 @@
-{"deviceId":2,"timestamp":"2025-01-03T19:00:00.0000000Z","hours_disconnected":24,"prev_hours_disconnected":23,"eventType":"Signal Disconnected (after 24 hours)"}
-{"deviceId":2,"timestamp":"2025-01-04T20:00:00.0000000Z","hours_disconnected":0,"prev_hours_disconnected":24,"eventType":"Signal back online"}
-{"deviceId":1,"timestamp":"2025-01-09T00:00:00.0000000Z","hours_disconnected":24,"prev_hours_disconnected":23,"eventType":"Signal Disconnected (after 24 hours)"}
-{"deviceId":2,"timestamp":"2025-01-09T00:00:00.0000000Z","hours_disconnected":24,"prev_hours_disconnected":23,"eventType":"Signal Disconnected (after 24 hours)"}
