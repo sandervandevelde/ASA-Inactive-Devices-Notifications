@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="resourceName" Label="resourceName" Group="Expanded" SubscriptionId="subscriptionId" TotalStreamingUnits="6" ActivityId="da2c515d-8856-45a5-90db-6c1d2a7e6bef" OutputErrorPolicy="Stop" EventsOutOfOrderPolicy="Adjust" EventsOutOfOrderMaxDelayInMS="2147483647" EventsLateArrivalMaxDelayInMS="-1" />
+    <Node Id="streamingNode0" Label="streamingNode0" Group="Expanded" MemorySizeInMB="3584" />
+    <Node Id="iothubinput#0$0" Label="iothubinput" ProcessorType="Input" ProcessorId="iothubinput#0$0" AdapterType="InputFile" PartitionIds="0" SerializerType="Json" HasTimestampBy="True" />
+    <Node Id="outputStep-output#0$0" Label="outputStep" ProcessorType="Output" ProcessorId="outputStep-output#0$0" AdapterType="LocalOutput" PartitionIds="0" SerializerType="Json" InputTimeShift="3.01:05:00" />
+    <Node Id="outputStep#0$0" Label="groupwindowing|differencecheck|addeventtype|outputStep" ProcessorType="Trill" ProcessorId="outputStep#0$0" InputTimeShift="3.01:00:00" />
+  </Nodes>
+  <Links>
+    <Link Source="resourceName" Target="streamingNode0" Category="Contains" />
+    <Link Source="streamingNode0" Target="iothubinput#0$0" Label="iothubinput#0$0" Category="Contains" />
+    <Link Source="streamingNode0" Target="outputStep-output#0$0" Label="outputStep-output#0$0" Category="Contains" />
+    <Link Source="outputStep-output#0$0" Target="outputStep#0$0" />
+    <Link Source="streamingNode0" Target="outputStep#0$0" Label="outputStep#0$0" Category="Contains" />
+    <Link Source="outputStep#0$0" Target="iothubinput#0$0" />
+  </Links>
+  <Properties />
+  <Categories />
+</DirectedGraph>

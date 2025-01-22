@@ -6,7 +6,7 @@ In the dummy dataset there are 2 devices, which send a message every hour betwee
 The goal is to detect when a device has been offline for the past 24 hours, but it was working the 24 hours previous, then it sends a notification of "Signal disconnected". 
 And it should detect when a device comes back online after being offline for 24 hours, by sending a notification of "Signal back online".
 
-
+    ![Case requirements](/assets/images/draft_asa_job.png "Case requirements")
 
 ## Credits
 The code provided is inspired by the solution in https://stackoverflow.com/questions/67920749/how-to-detect-if-no-data-ingested-in-any-iothub-device-using-stream-analytics

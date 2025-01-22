@@ -1,0 +1,14 @@
+{
+    "name": "ASA-Inactive-Devices-Notifications",
+    "startFile": "ASAExtendedAlertTest.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Inputs/Local_LocalInput.json",
+            "subType": "InputMock"
+        }
+    ]
+}

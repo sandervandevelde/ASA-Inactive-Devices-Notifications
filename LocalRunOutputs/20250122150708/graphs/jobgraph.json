@@ -1,0 +1,119 @@
+﻿{
+  "nodes": [
+    {
+      "id": "iothubinput_0",
+      "name": "iothubinput",
+      "type": "Input",
+      "processorId": "iothubinput#0$0",
+      "dataSourceType": "InputFile",
+      "partitionIds": [
+        0
+      ]
+    },
+    {
+      "id": "outputStep_groupwindowing_0",
+      "name": "groupwindowing",
+      "type": "Step",
+      "processorId": "outputStep#0$0",
+      "partitionIds": [
+        0
+      ],
+      "scriptPosition": {
+        "startLine": 5,
+        "startColumn": 5,
+        "startOffset": 246,
+        "endLine": 12,
+        "endColumn": 44,
+        "endOffset": 576
+      },
+      "inputTimeShift": "3.01:00:00"
+    },
+    {
+      "id": "outputStep_differencecheck_0",
+      "name": "differencecheck",
+      "type": "Step",
+      "processorId": "outputStep#0$0",
+      "partitionIds": [
+        0
+      ],
+      "scriptPosition": {
+        "startLine": 16,
+        "startColumn": 5,
+        "startOffset": 713,
+        "endLine": 23,
+        "endColumn": 22,
+        "endOffset": 1039
+      },
+      "inputTimeShift": "3.01:00:00"
+    },
+    {
+      "id": "outputStep_addeventtype_0",
+      "name": "addeventtype",
+      "type": "Step",
+      "processorId": "outputStep#0$0",
+      "partitionIds": [
+        0
+      ],
+      "scriptPosition": {
+        "startLine": 27,
+        "startColumn": 5,
+        "startOffset": 1120,
+        "endLine": 39,
+        "endColumn": 23,
+        "endOffset": 1541
+      },
+      "inputTimeShift": "3.01:00:00"
+    },
+    {
+      "id": "outputStep_outputStep_0",
+      "name": "outputStep",
+      "type": "Step",
+      "processorId": "outputStep#0$0",
+      "partitionIds": [
+        0
+      ],
+      "scriptPosition": {
+        "startLine": 42,
+        "startColumn": 1,
+        "startOffset": 1564,
+        "endLine": 51,
+        "endColumn": 25,
+        "endOffset": 1746
+      },
+      "inputTimeShift": "3.01:00:00"
+    },
+    {
+      "id": "outputStep-output_0",
+      "name": "output",
+      "type": "Output",
+      "processorId": "outputStep-output#0$0",
+      "dataSourceType": "LocalOutput",
+      "partitionIds": [
+        0
+      ],
+      "inputTimeShift": "3.01:05:00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "iothubinput_0",
+      "target": "outputStep_groupwindowing_0"
+    },
+    {
+      "source": "outputStep_groupwindowing_0",
+      "target": "outputStep_differencecheck_0"
+    },
+    {
+      "source": "outputStep_differencecheck_0",
+      "target": "outputStep_addeventtype_0"
+    },
+    {
+      "source": "outputStep_addeventtype_0",
+      "target": "outputStep_outputStep_0"
+    },
+    {
+      "source": "outputStep_outputStep_0",
+      "target": "outputStep-output_0"
+    }
+  ]
+}
